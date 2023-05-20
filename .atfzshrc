@@ -1,0 +1,41 @@
+unsetopt share_history 
+echo -n "Greetings $USER! Initializing"
+export PATH=/usr/local/mysql/bin:$PATH
+
+alias curltime='curl -w "@$HOME/Dropbox/tfield-convenience-scripts/curl-format.txt" -o /dev/null -s '
+alias tail=logtail
+alias p='cd /Volumes/Projects'
+
+# ############################################
+echo -n " oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+ZSH_THEME="maran"
+ZSH_THEME="jnrowe"
+ZSH_THEME="simple"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+# ############################################
+echo -n ", python"
+export PATH="$(pyenv root)/shims:${PATH}"
+
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+# ############################################
+echo -n ", nvm"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# ############################################
+# Tony: use sdkman to install multiple java versions, switch between java versions, and 
+# install the micronaut command line.
+echo -n ", sdkman"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# ############################################
+echo "."

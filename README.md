@@ -12,8 +12,8 @@ Handy zsh enhancements for my zsh development environment.  This command expects
 Add the following to your `.zshrc`
 
 ```zsh
-[ ! -f $HOME/.atf/.zshrc ] && mkdir -p $HOME/.atf && curl https://raw.githubusercontent.com/tfield/shell-tools/main/.zshrc > $HOME/.atf/.zshrc
-source $HOME/.atf/.zshrc
+# ATF Shell Tools
+[ ! -f $HOME/.atf/.zshrc ] && (mkdir -p $HOME/.atf && curl https://raw.githubusercontent.com/tfield/shell-tools/main/.zshrc > $HOME/.atf/.zshrc) ; source $HOME/.atf/.zshrc
 ```
 
 ## Removal:

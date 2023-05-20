@@ -2,8 +2,10 @@ unsetopt share_history
 echo -n "Greetings $USER! Initializing"
 export PATH=/usr/local/mysql/bin:$PATH
 
+[ ! -d $HOME/bin ] && mkdir -p $HOME/bin
+[ ! -f $HOME/bin/logtail.sh ]  && curl https://raw.githubusercontent.com/tfield/shell-tools/main/.atfzshrc > $HOME/bin/logtail.sh
 alias curltime='curl -w "@$HOME/Dropbox/tfield-convenience-scripts/curl-format.txt" -o /dev/null -s '
-alias tail=logtail
+alias tail=logtail.sh
 alias p='cd /Volumes/Projects'
 
 # ############################################

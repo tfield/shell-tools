@@ -1,15 +1,16 @@
 unsetopt share_history 
-echo -n "Greetings $USER! Initializing"
+echo -n "Greetings $USER!"
 
 [ ! -d $HOME/.atfbin ] && mkdir -p $HOME/.atfbin
 export PATH=$HOME/.atfbin:$PATH
 
-[ ! -f $HOME/.atfbin/logtail.sh ]  && echo -n " logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/.atfbin/logtail.sh && chmod +x $HOME/.atfbin/logtail.sh
+[ ! -f $HOME/.atfbin/logtail.sh ] && echo "" && echo "Installing logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/.atfbin/logtail.sh && chmod +x $HOME/.atfbin/logtail.sh
 alias tail=logtail.sh
 
-[ ! -f $HOME/.atfbin/curl-format.txt ]  && echo -n " curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atfbin/curl-format.txt
-
+[ ! -f $HOME/.atfbin/curl-format.txt ] && echo "" && echo "Installing curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atfbin/curl-format.txt
 alias curltime='curl -w "@$HOME/.atfbin/curl-format.txt" -o /dev/null -s '
+
+echo -n " Initializing"
 alias p='cd /Volumes/Projects'
 
 export PATH=/usr/local/mysql/bin:$PATH

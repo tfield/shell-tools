@@ -1,5 +1,5 @@
 unsetopt share_history 
-echo -n "Greetings $USER!"
+echo -n "Greetings $USER! "
 
 [ ! -d $HOME/.atfbin ] && mkdir -p $HOME/.atfbin
 export PATH=$HOME/.atfbin:$PATH
@@ -10,7 +10,7 @@ alias tail=logtail.sh
 [ ! -f $HOME/.atfbin/curl-format.txt ] && echo "" && echo "Installing curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atfbin/curl-format.txt
 alias curltime='curl -w "@$HOME/.atfbin/curl-format.txt" -o /dev/null -s '
 
-echo -n " Initializing"
+echo -n "Initializing"
 alias p='cd /Volumes/Projects'
 
 export PATH=/usr/local/mysql/bin:$PATH

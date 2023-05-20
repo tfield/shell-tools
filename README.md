@@ -12,7 +12,7 @@ Handy zsh enhancements for my zsh development environment.  This command expects
 Add the following to your `.zshrc`
 
 ```zsh
-# ATF Shell Tools
+# Tony Field Shell Tools https://github.com/tfield/shell-tools
 [ ! -f $HOME/.atf/.zshrc ] && (mkdir -p $HOME/.atf && curl https://raw.githubusercontent.com/tfield/shell-tools/main/.zshrc > $HOME/.atf/.zshrc) ; source $HOME/.atf/.zshrc
 ```
 

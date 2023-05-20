@@ -4,7 +4,7 @@ echo -n "Greetings $USER! Initializing"
 [ ! -d $HOME/bin ] && mkdir -p $HOME/bin
 export PATH=$HOME/bin:$PATH
 
-[ ! -f $HOME/bin/logtail.sh ]  && echo -n " logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/bin/logtail.sh && chmod +x logtail.sh
+[ ! -f $HOME/bin/logtail.sh ]  && echo -n " logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/bin/logtail.sh && chmod +x $HOME/bin/logtail.sh
 alias tail=logtail.sh
 
 alias curltime='curl -w "@$HOME/Dropbox/tfield-convenience-scripts/curl-format.txt" -o /dev/null -s '

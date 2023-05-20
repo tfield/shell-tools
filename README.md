@@ -12,7 +12,7 @@ source $HOME/.atfzshrc
 
 ## Removal:
 
-Run the following
+Remove the two lines listed in _Installation_ above from your `.zshrc`. and then run the following
 
 ```zsh
 cd $HOME

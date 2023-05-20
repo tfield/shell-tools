@@ -1,13 +1,15 @@
 unsetopt share_history 
 echo -n "Greetings $USER! Initializing"
 
-[ ! -d $HOME/bin ] && mkdir -p $HOME/bin
-export PATH=$HOME/bin:$PATH
+[ ! -d $HOME/.atfbin ] && mkdir -p $HOME/.atfbin
+export PATH=$HOME/.atfbin:$PATH
 
-[ ! -f $HOME/bin/logtail.sh ]  && echo -n " logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/bin/logtail.sh && chmod +x $HOME/bin/logtail.sh
+[ ! -f $HOME/.atfbin/logtail.sh ]  && echo -n " logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/.atfbin/logtail.sh && chmod +x $HOME/.atfbin/logtail.sh
 alias tail=logtail.sh
 
-alias curltime='curl -w "@$HOME/Dropbox/tfield-convenience-scripts/curl-format.txt" -o /dev/null -s '
+[ ! -f $HOME/.atfbin/curl-format.txt ]  && echo -n " curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atfbin/curl-format.txt
+
+alias curltime='curl -w "@$HOME/.atfbin/curl-format.txt" -o /dev/null -s '
 alias p='cd /Volumes/Projects'
 
 export PATH=/usr/local/mysql/bin:$PATH

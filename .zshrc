@@ -25,8 +25,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # ############################################
-echo -n ", python"
-export PATH="$(pyenv root)/shims:${PATH}"
+[ -f /opt/homebrew/bin/pyenv ] && (echo -n ", python" && export PATH="$(pyenv root)/shims:${PATH}")
 
 # export PATH="$HOME/.jenv/bin:$PATH"
 # eval "$(jenv init -)"

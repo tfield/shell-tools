@@ -1,14 +1,13 @@
 unsetopt share_history 
 echo -n "Greetings $USER! "
 
-[ ! -d $HOME/.atfbin ] && mkdir -p $HOME/.atfbin
-export PATH=$HOME/.atfbin:$PATH
+export PATH=$HOME/.atf:$PATH
 
-[ ! -f $HOME/.atfbin/logtail.sh ] && echo "" && echo "Installing logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/.atfbin/logtail.sh && chmod +x $HOME/.atfbin/logtail.sh
+[ ! -f $HOME/.atf/logtail.sh ] && echo "" && echo "Installing logtail" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/logtail.sh > $HOME/.atf/logtail.sh && chmod +x $HOME/.atf/logtail.sh
 alias tail=logtail.sh
 
-[ ! -f $HOME/.atfbin/curl-format.txt ] && echo "" && echo "Installing curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atfbin/curl-format.txt
-alias curltime='curl -w "@$HOME/.atfbin/curl-format.txt" -o /dev/null -s '
+[ ! -f $HOME/.atf/curl-format.txt ] && echo "" && echo "Installing curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atf/curl-format.txt
+alias curltime='curl -w "@$HOME/.atf/curl-format.txt" -o /dev/null -s '
 
 echo -n "Initializing"
 alias p='cd /Volumes/Projects'

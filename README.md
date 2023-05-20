@@ -17,6 +17,5 @@ Run the following
 ```zsh
 cd $HOME
 rm .atfzshrc
-rm bin/logtail.sh
-rm bin/curltime.sh
+rm -rf $HOME/.atfbin
 ```

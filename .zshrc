@@ -12,6 +12,7 @@ alias curltime='curl -w "@$HOME/.atf/curl-format.txt" -o /dev/null -s '
 echo -n "Initializing"
 alias p='cd /Volumes/Projects'
 
+export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS":$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 
 # ############################################

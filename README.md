@@ -20,7 +20,7 @@ Add the following to your `~/.zshrc`
 
 Add the following to your `~/.ideavimrc`
 ```zsh
-source $HOME/.atf/.ideavimrc
+source ~/.atf/.ideavimrc
 ```
 
 ## Removal:

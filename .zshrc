@@ -9,6 +9,8 @@ alias tail=logtail.sh
 [ ! -f $HOME/.atf/curl-format.txt ] && echo "" && echo "Installing curltime" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/curl-format.txt > $HOME/.atf/curl-format.txt
 alias curltime='curl -w "@$HOME/.atf/curl-format.txt" -o /dev/null -s '
 
+[ ! -f $HOME/.atf/.ideavimrc ] && echo "" && echo "Installing IdeaVim config" && curl https://raw.githubusercontent.com/tfield/shell-tools/main/.ideavimrc > $HOME/.atf/.ideavimrc
+
 echo -n "Initializing"
 alias p='cd /Volumes/Projects'
 

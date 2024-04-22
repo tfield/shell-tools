@@ -16,6 +16,7 @@ alias p='cd /Volumes/Projects'
 
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS":$PATH
 export PATH=/usr/local/mysql/bin:$PATH
+export DISPLAY=localhost:0
 
 # ############################################
 echo -n " oh-my-zsh"

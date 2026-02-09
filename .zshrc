@@ -16,6 +16,7 @@ alias p='cd /Volumes/Projects'
 
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS":$PATH
 export PATH=/usr/local/mysql/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 export DISPLAY=localhost:0
 
 # ############################################
@@ -40,6 +41,12 @@ echo -n ", pyenv"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 # [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# ############################################
+echo -n ", docker completions"
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
 
 # ############################################
 # Tony: use sdkman to install multiple java versions, switch between java versions, and 

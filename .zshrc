@@ -19,6 +19,9 @@ export PATH=/usr/local/mysql/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
 export DISPLAY=localhost:0
 
+alias claude-tf="CLAUDE_CONFIG_DIR=$HOME/.claude-tf claude"
+alias claude-kd="CLAUDE_CONFIG_DIR=$HOME/.claude claude" 
+
 # ############################################
 echo -n " oh-my-zsh"
 export ZSH="$HOME/.oh-my-zsh"
